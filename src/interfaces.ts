@@ -1,8 +1,9 @@
+interface Friend {
+  firstName: string;
+  age: string;
+  country: null;
+}
 export interface FriendsFormValues {
   name: string;
-  friends: {
-    firstName: string;
-    age: string;
-    country: null;
-  }[];
+  friends: Friend[];
 }

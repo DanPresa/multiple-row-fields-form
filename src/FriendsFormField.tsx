@@ -7,7 +7,7 @@ import useFriendsFormField from './useFriendsFormField';
 import MuiTextField from './components/MuiTextField';
 import MuiAutocomplete from './components/MuiAutocomplete';
 
-const FriendsFormField: FC<any> = ({ ...props }) => {
+const FriendsFormField: FC<{}> = () => {
   const { fields, addNewFriend, removeFriend } = useFriendsFormField();
 
   return (

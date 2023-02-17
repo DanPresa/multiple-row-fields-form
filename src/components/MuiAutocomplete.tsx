@@ -12,11 +12,6 @@ const MuiAutocomplete: FC<MuiAutocompleteProps> = ({
   name,
   ...otherProps
 }) => {
-  /* const {
-    control,
-    formState: { errors },
-  } = useFormContext(); */
-
   const methods = useFormContext();
 
   return (

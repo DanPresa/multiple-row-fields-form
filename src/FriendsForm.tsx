@@ -29,19 +29,21 @@ export type IFormInput = InferType<typeof yupSchema>;
 const FriendsForm: FC<{}> = () => {
   const [values, setValues] = useState<IFormInput>();
 
+  const defaultValues = {
+    firstName: '',
+    friends: [
+      {
+        firstName: '',
+        age: '',
+        country: null,
+      },
+    ],
+  };
+
   const methods = useForm<IFormInput>({
     mode: 'onChange',
     resolver: yupResolver(yupSchema),
-    defaultValues: {
-      firstName: '',
-      friends: [
-        {
-          firstName: '',
-          age: '',
-          country: null,
-        },
-      ],
-    },
+    defaultValues,
   });
 
   const { handleSubmit } = methods;
